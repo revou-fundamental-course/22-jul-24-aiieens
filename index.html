@@ -5,15 +5,15 @@
 <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body style="margin: 0;">
     <nav>
         <header>
             <div class="logo-icon"></div>
         </header>
 
         <section class="nav-container">
-            <a class="nav-item" style="border-right: solid 1px;">Home</a>
-            <a class="nav-item" style="border-right: solid 1px;">Our Package</a>
+            <a class="nav-item" style="border-right: solid 1px; border-color: #cfcfcf;">Home</a>
+            <a class="nav-item" style="border-right: solid 1px; border-color: #cfcfcf;">Our Package</a>
             <a class="nav-item">Call Us</a>
         </section>
     </nav>
@@ -21,34 +21,48 @@
     <main>
         <article class="main-title">
             <header>
-                <h1>Your Trusted Travel Agent</h1>
+                <h1 class="header-title">FIRST WEBSITE</h1>
             </header>
 
-            <p>Your hapiness is our hapiness</p>
+            <p class="main-article">RevoU Fundamental Course Project: Making a Website</p>
         </article>
 
         <section class="main-content">
             <article class="main-content-item">
                 <div class="main-content-banner"></div>
+                <p class="banner-desc">"Everything happens for a reason."</p>
 
                 <div class="main-item">
                     <div class="item-icon"></div>
-
+                    
                     <div class="main-text">
                         <h4 style="
                             margin: 10px;
                             margin-left: 0px;
+                            margin-bottom: 5px;
+                            color: #353d46;
                         ">Makayla Aileen</h4>
                         <p style="
                         margin: 10px;
                         margin-left: 0px;
-                        ">The web maker</p>
+                        margin-top: 5px;
+                        font-size: small;
+                        font-style: italic;
+                        color: #888888
+                        ">The Web Maker</p>
                     </div>
                 </div>
+
+                <hr style="
+                border: solid 1px;
+                width: 95%;
+                border-color: #d8d8d8;
+                border-radius: 1px;">
+
             </article>
             
             <form class="main-content-form">
-                <h3 class="contact-us">Contact Us</h3>
+                <h3 class="contact-us">CONTACT US</h3>
                 <p class="description">Sales akan menghubungi anda 1x24 jam setelah data kami terima.</p>
 
                 <p class="fill-in">Your Name:</p>
@@ -58,12 +72,236 @@
                 <input type="text" placeholder="example@email.com">
 
                 <p class="fill-in">What are you interested in?</p>
-                <input type="text" placeholder="Select Option">
+                <!--<input type="text" placeholder="Select Option"> -->
+
+                <select class="option">
+                    <option value="opt0">Select Option</option>
+                    <option value="opt1">Option 1</option>
+                    <option value="opt2">Option 2</option>
+                    <option value="opt3">Option 3</option>
+                    <option value="opt4">Option 4</option>
+                </select>
 
                 <button type="button">SEND</button>
             </form>
         </section>
+
+        <article class="main-content-item">
+            <h4 class="explanation">Use this space to provide users with more information about your offer. Consider to follow-up to your headline and explain the benefits of your service or products</h4>
+
+            <div class="feature-list">
+                <div class="number-list">1</div>
+                
+                <div class="main-text" style="width: 35%;">
+                    <p style="
+                    margin: 10px;
+                    margin-left: 0px;
+                    margin-top: 5px;
+                    font-size: small;
+                    color: #888888;
+                    ">State your feature here.</p>
+                </div>
+            </div>
+
+            <div class="feature-list">
+                <div class="number-list">2</div>
+                
+                <div class="main-text" style="width: 35%;">
+                    <p style="
+                    margin: 10px;
+                    margin-left: 0px;
+                    margin-top: 5px;
+                    font-size: small;
+                    color: #888888;
+                    ">State your feature here.</p>
+                </div>
+            </div>
+
+            <div class="feature-list">
+                <div class="number-list">3</div>
+                
+                <div class="main-text" style="width: 35%;">
+                    <p style="
+                    margin: 10px;
+                    margin-left: 0px;
+                    margin-top: 5px;
+                    font-size: small;
+                    color: #888888;
+                    ">State your feature here.</p>
+                </div>
+            </div>
+        </article> 
+    </main>
+
+    <article class="our-package">
+        <header>
+            <h1 style="
+            font-weight: 1000;
+            color: white;
+            ">OUR PACKAGE</h1>
+        </header>
+    </article>
+
+    
+    <main style="margin: 40px">
+        <section style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;">
+
+        <div class="package-list">
+            <div class="package-icon"></div>
+            
+            <div class="main-text" style="width: 20%;">
+                <h4 style="
+                margin: 10px;
+                margin-left: 0px;
+                margin-top: 5px;
+                font-size: medium;
+                font-weight: bold;
+                color: #353d46;
+                padding-top: 8px;
+                ">Location 1</h4>
+
+                <p style="
+                margin: 10px;
+                margin-left: 0px;
+                margin-top: 5px;
+                font-size: small;
+                color: #888888;
+                padding-right: 20px;
+                ">Write more information about your package description here.
+                </p>
+            </div>
+
+            <div class="package-icon"></div>
+            
+            <div class="main-text" style="width: 20%;">
+                <h4 style="
+                margin: 10px;
+                margin-left: 0px;
+                margin-top: 5px;
+                font-size: medium;
+                font-weight: bold;
+                color: #353d46;
+                padding-top: 8px;
+                ">Location 2</h4>
+
+                <p style="
+                margin: 10px;
+                margin-left: 0px;
+                margin-top: 5px;
+                font-size: small;
+                color: #888888;
+                padding-right: 20px;
+                ">Write more information about your package description here.
+                </p>
+            </div>
+
+            <div class="package-icon"></div>
+            
+            <div class="main-text" style="width: 20%;">
+                <h4 style="
+                margin: 10px;
+                margin-left: 0px;
+                margin-top: 5px;
+                font-size: medium;
+                font-weight: bold;
+                color: #353d46;
+                padding-top: 8px;
+                ">Location 3</h4>
+
+                <p style="
+                margin: 10px;
+                margin-left: 0px;
+                margin-top: 5px;
+                font-size: small;
+                color: #888888;
+                padding-right: 20px;
+                ">Write more information about your package description here.
+                </p>
+            </div>
+        </div>
+
+        <hr style="
+                border: solid 2px;
+                width: 8%;
+                border-color: #d8d8d8;
+                border-radius: 2px;
+                margin: 50px;">
+
+        <div class="package-list">
+
+            <div class="package-icon"></div>
+            <div class="main-text" style="width: 20%;">
+                <h4 style="
+                margin: 10px;
+                margin-left: 0px;
+                margin-top: 5px;
+                font-size: medium;
+                font-weight: bold;
+                color: #353d46;
+                padding-top: 8px;
+                ">Location 4</h4>
+
+                <p style="
+                margin: 10px;
+                margin-left: 0px;
+                margin-top: 5px;
+                font-size: small;
+                color: #888888;
+                padding-right: 20px;
+                ">Write more information about your package description here.
+                </p>
+            </div>
+
+            <div class="package-icon"></div>
+            <div class="main-text" style="width: 20%;">
+                <h4 style="
+                margin: 10px;
+                margin-left: 0px;
+                margin-top: 5px;
+                font-size: medium;
+                font-weight: bold;
+                color: #353d46;
+                padding-top: 8px;
+                ">Location 5</h4>
+
+                <p style="
+                margin: 10px;
+                margin-left: 0px;
+                margin-top: 5px;
+                font-size: small;
+                color: #888888;
+                padding-right: 20px;
+                ">Write more information about your package description here.
+                </p>
+            </div>
+
+            <div class="package-icon"></div>
+            <div class="main-text" style="width: 20%;">
+                <h4 style="
+                margin: 10px;
+                margin-left: 0px;
+                margin-top: 5px;
+                font-size: medium;
+                font-weight: bold;
+                color: #353d46;
+                padding-top: 8px;
+                ">Location 6</h4>
+
+                <p style="
+                margin: 10px;
+                margin-left: 0px;
+                margin-top: 5px;
+                font-size: small;
+                color: #888888;
+                padding-right: 20px;
+                ">Write more information about your package description here.
+                </p>
+            </div>
+        </div>
+        </section>
     </main>
 </body>
-
 </html>
