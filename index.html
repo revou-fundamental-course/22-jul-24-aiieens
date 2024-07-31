@@ -3,22 +3,23 @@
 
 <head>
 <link rel="stylesheet" href="css/styles.css">
+<title>RevoU Project</title>
 </head>
 
 <body style="margin: 0;">
-    <nav>
+    <nav class="menu-wrapper">
         <header>
             <div class="logo-icon"></div>
         </header>
 
         <section class="nav-container">
-            <a class="nav-item" style="border-right: solid 1px; border-color: #cfcfcf;">Home</a>
-            <a class="nav-item" style="border-right: solid 1px; border-color: #cfcfcf;">Our Package</a>
-            <a class="nav-item">Call Us</a>
+            <a class="nav-item" href="#home-page" style="border-right: solid 1px; border-color: #cfcfcf;">Home</a>
+            <a href="#our-package-page" class="nav-item" style="border-right: solid 1px; border-color: #cfcfcf;">Our Package</a>
+            <a href="#call-us-page" class="nav-item">Call Us</a>
         </section>
     </nav>
 
-    <main>
+    <main id="home-page" class="scroll-offset">
         <article class="main-title">
             <header>
                 <h1 class="header-title">FIRST WEBSITE</h1>
@@ -28,12 +29,25 @@
         </article>
 
         <section class="main-content">
+
+            <!--article-->
             <article class="main-content-item">
-                <div class="main-content-banner"></div>
+                <div class="main-content-banner">
+                    <img class="image-slideshow" src="https://i.pinimg.com/736x/ad/2a/71/ad2a71630a2ad76615ba302e517b81cf.jpg"/>
+                    <img class="image-slideshow" src="https://i.pinimg.com/736x/85/53/ad/8553adcb28a34b143e887f08b7a1810e.jpg"/>
+                    <img class="image-slideshow" src="https://i.pinimg.com/736x/71/e8/a1/71e8a130d9d762de1865ad7d07d12c39.jpg"/>
+                
+                    <button class="hidden" onclick="plusDivs(-1)">Previous</button>
+                    <button class="hidden" onclick="plusDivs(1)">Next</button>
+                </div>
+                
+                <script src="js/script.js"></script>
+            
+
                 <p class="banner-desc">"Everything happens for a reason."</p>
 
                 <div class="main-item">
-                    <div class="item-icon"></div>
+                    <img class="item-icon" src="https://i.pinimg.com/736x/45/85/1e/45851ef0f59a2e63a9b0a17f914e5c00.jpg"/>
                     
                     <div class="main-text">
                         <h4 style="
@@ -54,22 +68,25 @@
                 </div>
 
                 <hr style="
-                border: solid 1px;
-                width: 95%;
+                border: solid 2px;
+                width: 8%;
                 border-color: #d8d8d8;
-                border-radius: 1px;">
-
-            </article>
+                border-radius: 2px;">
             
+            </article>
+           
+            <!--form-->
             <form class="main-content-form">
                 <h3 class="contact-us">CONTACT US</h3>
                 <p class="description">Sales akan menghubungi anda 1x24 jam setelah data kami terima.</p>
 
                 <p class="fill-in">Your Name:</p>
-                <input type="text" placeholder="First and last name">
+                <input id="input-name" type="text" placeholder="First and last name">
+                <p class="error-indicator" id="error-name"></p>
                 
                 <p class="fill-in">Email Address:</p>
                 <input type="text" placeholder="example@email.com">
+                <p class="error-indicator" id="error-email"></p>
 
                 <p class="fill-in">What are you interested in?</p>
                 <!--<input type="text" placeholder="Select Option"> -->
@@ -81,18 +98,21 @@
                     <option value="opt3">Option 3</option>
                     <option value="opt4">Option 4</option>
                 </select>
+                <p class="error-indicator" id="error-option"></p>
 
-                <button type="button">SEND</button>
+                <button class="send" type="button" onclick="formValidation();">SEND</button>
+                <p class="success" id="submitted"></p>
             </form>
         </section>
 
-        <article class="main-content-item">
+        <!--feature list-->
+        <article class="main-content-feature">
             <h4 class="explanation">Use this space to provide users with more information about your offer. Consider to follow-up to your headline and explain the benefits of your service or products</h4>
 
             <div class="feature-list">
                 <div class="number-list">1</div>
                 
-                <div class="main-text" style="width: 35%;">
+                <div class="feature-text">
                     <p style="
                     margin: 10px;
                     margin-left: 0px;
@@ -106,7 +126,7 @@
             <div class="feature-list">
                 <div class="number-list">2</div>
                 
-                <div class="main-text" style="width: 35%;">
+                <div class="feature-text">
                     <p style="
                     margin: 10px;
                     margin-left: 0px;
@@ -120,7 +140,7 @@
             <div class="feature-list">
                 <div class="number-list">3</div>
                 
-                <div class="main-text" style="width: 35%;">
+                <div class="feature-text">
                     <p style="
                     margin: 10px;
                     margin-left: 0px;
@@ -133,8 +153,9 @@
         </article> 
     </main>
 
-    <article class="our-package">
-        <header>
+    <!--our package-->
+    <article id="our-package-page" class="our-package scroll-offset" >
+        <header class="header-wrapper">
             <h1 style="
             font-weight: 1000;
             color: white;
@@ -150,9 +171,10 @@
             align-items: center;">
 
         <div class="package-list">
-            <div class="package-icon"></div>
+        <div class="icon-text">
+            <img class="package-icon" src="https://cdn-icons-png.flaticon.com/512/535/535239.png"/>
             
-            <div class="main-text" style="width: 20%;">
+            <div class="location">
                 <h4 style="
                 margin: 10px;
                 margin-left: 0px;
@@ -170,13 +192,15 @@
                 font-size: small;
                 color: #888888;
                 padding-right: 20px;
-                ">Write more information about your package description here.
+                ">Write more information about your location description here.
                 </p>
             </div>
+        </div>
 
-            <div class="package-icon"></div>
+        <div class="icon-text">
+            <img class="package-icon" src="https://cdn-icons-png.flaticon.com/512/535/535239.png"/>
             
-            <div class="main-text" style="width: 20%;">
+            <div class="location">
                 <h4 style="
                 margin: 10px;
                 margin-left: 0px;
@@ -194,13 +218,15 @@
                 font-size: small;
                 color: #888888;
                 padding-right: 20px;
-                ">Write more information about your package description here.
+                ">Write more information about your location description here.
                 </p>
             </div>
+        </div>
 
-            <div class="package-icon"></div>
+        <div class="icon-text">
+            <img class="package-icon" src="https://cdn-icons-png.flaticon.com/512/535/535239.png"/>
             
-            <div class="main-text" style="width: 20%;">
+            <div class="location">
                 <h4 style="
                 margin: 10px;
                 margin-left: 0px;
@@ -218,9 +244,10 @@
                 font-size: small;
                 color: #888888;
                 padding-right: 20px;
-                ">Write more information about your package description here.
+                ">Write more information about your location description here.
                 </p>
             </div>
+        </div>
         </div>
 
         <hr style="
@@ -232,8 +259,9 @@
 
         <div class="package-list">
 
-            <div class="package-icon"></div>
-            <div class="main-text" style="width: 20%;">
+        <div class="icon-text">
+            <img class="package-icon" src="https://cdn-icons-png.flaticon.com/512/1007/1007988.png"/>
+            <div class="location">
                 <h4 style="
                 margin: 10px;
                 margin-left: 0px;
@@ -242,53 +270,7 @@
                 font-weight: bold;
                 color: #353d46;
                 padding-top: 8px;
-                ">Location 4</h4>
-
-                <p style="
-                margin: 10px;
-                margin-left: 0px;
-                margin-top: 5px;
-                font-size: small;
-                color: #888888;
-                padding-right: 20px;
-                ">Write more information about your package description here.
-                </p>
-            </div>
-
-            <div class="package-icon"></div>
-            <div class="main-text" style="width: 20%;">
-                <h4 style="
-                margin: 10px;
-                margin-left: 0px;
-                margin-top: 5px;
-                font-size: medium;
-                font-weight: bold;
-                color: #353d46;
-                padding-top: 8px;
-                ">Location 5</h4>
-
-                <p style="
-                margin: 10px;
-                margin-left: 0px;
-                margin-top: 5px;
-                font-size: small;
-                color: #888888;
-                padding-right: 20px;
-                ">Write more information about your package description here.
-                </p>
-            </div>
-
-            <div class="package-icon"></div>
-            <div class="main-text" style="width: 20%;">
-                <h4 style="
-                margin: 10px;
-                margin-left: 0px;
-                margin-top: 5px;
-                font-size: medium;
-                font-weight: bold;
-                color: #353d46;
-                padding-top: 8px;
-                ">Location 6</h4>
+                ">Package 1</h4>
 
                 <p style="
                 margin: 10px;
@@ -301,7 +283,94 @@
                 </p>
             </div>
         </div>
+
+        <div class="icon-text">
+            <img class="package-icon" src="https://cdn-icons-png.flaticon.com/512/1007/1007988.png"/>
+            <div class="location">
+                <h4 style="
+                margin: 10px;
+                margin-left: 0px;
+                margin-top: 5px;
+                font-size: medium;
+                font-weight: bold;
+                color: #353d46;
+                padding-top: 8px;
+                ">Package 2</h4>
+
+                <p style="
+                margin: 10px;
+                margin-left: 0px;
+                margin-top: 5px;
+                font-size: small;
+                color: #888888;
+                padding-right: 20px;
+                ">Write more information about your package description here.
+                </p>
+            </div>
+        </div>
+
+        <div class="icon-text">
+            <img class="package-icon" src="https://cdn-icons-png.flaticon.com/512/1007/1007988.png"/>
+            <div class="location">
+                <h4 style="
+                margin: 10px;
+                margin-left: 0px;
+                margin-top: 5px;
+                font-size: medium;
+                font-weight: bold;
+                color: #353d46;
+                padding-top: 8px;
+                ">Package 3</h4>
+
+                <p style="
+                margin: 10px;
+                margin-left: 0px;
+                margin-top: 5px;
+                font-size: small;
+                color: #888888;
+                padding-right: 20px;
+                ">Write more information about your package description here.
+                </p>
+            </div>
+        </div>
+        </div>
         </section>
     </main>
+    
+    <hr style="
+        border: solid 1px;
+        width: 100%;
+        border-color: #ececec;
+        margin-top: 100px;
+        margin-bottom: 45px;">
+
+    <!--call us-->
+    <main id="call-us-page" class="scroll-offset">
+        <h1>THANK YOU!</h1>
+        <p class="closing">State your closing line here.</p>
+        <button class="class-to-action">CALL US</button>
+    </main>
+
+    <hr style="
+        border: solid 1px;
+        width: 100%;
+        border-color: #ececec;
+        margin-top: 40px;
+        margin-bottom: 40px;">
+
 </body>
+
+<footer>
+    <div class="logo-icon"></div>
+    <div class="privacy">
+        <p style="margin-right: 6px; margin-bottom: 0;">Terms of Service</p>
+        <p style="margin-left: 6px; margin-bottom: 0;">Privacy Policy</p>
+    </div>
+
+    <div class="copyright">
+        <p style="margin-right: 6px; margin-top: 3px;">© 2024</p>
+        <p style="margin-left: 6px; margin-top: 3px;">len.</p>
+    </div> 
+</footer>
+
 </html>
