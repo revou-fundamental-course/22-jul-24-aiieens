@@ -447,10 +447,10 @@ footer div p {
         margin-bottom: 50px;
     }
 
-    }
+ }
 
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .main-content-form {
         width: calc(70% - 40px);
     }
